@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Javascript - Add HTML Table Row </title>
+
+<meta charset="windows-1252">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+ function  addRowTop(){
+//var SL.NO  = document.getElementById('SL.NO').value;
+var fname = document.getElementById('fname').value;
+var lname = document.getElementById('lname').value;
+var city = document.getElementById('city').value;
+var Country = document.getElementById('Country').value;
+
+var table = document.getElementsByTagName('table')[0];
+
+var newRow = table.insertRow(1);
+
+var ce11 = newRow.insertCell(0);
+var ce12 = newRow.insertCell(1);
+var ce13 = newRow.insertCell(2);
+var ce14 = newRow.insertCell(3);
+var ce15 = newRow.insertCell(4);
+
+//ce11.innerHTML = SL.NO;
+ce12.innerHTML = fname;
+ce13.innerHTML = lname;
+ce14.innerHTML = city;
+ce15.innerHTML = Country;
+}
+var s=5;
+function  addRowbottom(){
+var fname = document.getElementById('fname').value;
+var lname = document.getElementById('lname').value;
+var city = document.getElementById('city').value;
+var Country = document.getElementById('Country').value;
+
+var table = document.getElementsByTagName('table')[0];
+
+var newRow = table.insertRow(table.rows.length);
+
+var ce11 = newRow.insertCell(0);
+var ce12 = newRow.insertCell(1);
+var ce13 = newRow.insertCell(2);
+var ce14 = newRow.insertCell(3);
+var ce15 = newRow.insertCell(4);
+
+//ce11.innerHTML = SL.NO;
+s=s+1;
+ce11.innerHTML = s;
+ce12.innerHTML = fname;
+ce13.innerHTML = lname;
+ce14.innerHTML = city;
+ce15.innerHTML = Country;
+}
+
+</script>
+</head>
+<body>
+<div>
+<!--SL.NO <input type="text" name="SL.NO " id="SL.NO " />-->
+First Name <input type="text" name="fname" id="fname" />
+Last Name<input type="text" name="lname" id="lname" />
+City <input type="text" name="city" id="city" />
+Country<input type="text" name="Country" id="Country" /></br></br>
+<button onclick="addRowTop();">Top</button>
+<button onclick="addRowbottom();">bottom</button>
+
+</div>
+<table border="1">
+<tr>
+<th>SL.NO</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>City</th>
+<th>Country</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>vivek</td>
+<td>sahu</td>
+<td>katni</td>
+<td>India</td>
+</tr>
+<tr>
+<td>2</td>
+<td>vinay</td>
+<td>sahu</td>
+<td>katni</td>
+<td>India</td>
+</tr>
+<tr>
+<td>3</td>
+<td>pankaj</td>
+<td>gautam</td>
+<td>satna</td>
+<td>India</td>
+</tr>
+<tr>
+<td>4</td>
+<td>aman</td>
+<td>sen</td>
+<td>mumbai</td>
+<td>India</td>
+</tr>
+<tr>
+<td>5</td>
+<td>yash</td>
+<td>wankar</td>
+<td>satna</td>
+<td>India</td>
+</tr>
+
+
+</table>
+</body>
+
+
